@@ -5,7 +5,8 @@
   "main": "index.js",
   "dependencies": {
     "jasmine-reporters": "^1.0.1",
-    "protractor": "^1.4.0"
+    "protractor": "^1.4.0",
+    "protractor-screenshot-reporter": "0.0.5"
   },
   "devDependencies": {},
   "scripts": {
@@ -22,4 +23,3 @@
   },
   "homepage": "https://github.com/aieng09/protractordemo"
 }
-

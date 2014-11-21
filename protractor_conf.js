@@ -20,6 +20,13 @@ exports.config = {
   // specs: ['test/main.spec.js'],
   baseUrl: setting.baseUrl,
 
+  onPrepare: function() {
+    // Add a screenshot reporter and store screenshots to `/tmp/screnshots`:
+    jasmine.getEnv().addReporter(new ScreenShotReporter({
+      baseDirectory: './tmp/screenshots',takeScreenShotsOnlyForFailedSpecs: false
+    }));
+  },
+
   // Options to be passed to Jasmine-node.
   jasmineNodeOpts: {
     showColors: true,
