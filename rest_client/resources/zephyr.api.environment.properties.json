@@ -1,0 +1,91 @@
+{
+    "Environments": {
+        "Production":{
+            "username":"aieng",
+            "password":"Illumina1",
+            "baseApiUrl":"http://basespace-project.illumina.com/rest/zapi/latest",
+            "ContentType":"application/json;charset=UTF-8",
+            "projectId":"@PROJECT_ID",
+            "versionId": "@VERSION_ID"
+        },
+
+        "Test":{
+            "username":"poc",
+            "password":"password1",
+            "baseApiUrl":"http://config550vm0.illumina.com:8080/rest/zapi/latest",
+            "ContentType":"application/json;charset=UTF-8",
+            "projectId":"10202",
+            "versionId": "-1",
+            "existingCycleId":"331"
+
+        }
+    },
+    "zapiProperties":{
+        "getAllTestCycles": {
+            "urlPath":"/cycle",
+            "queryParam":{
+                "projectId":"@PROJECT_ID",
+                "versionId":"@VERSION_ID"
+            }
+        },
+        "getTestCycleById": "/cycle/@ID",
+        "createNewTestCycle":{
+            "urlPath":"/cycle",
+            "rawData":{
+                "clonedCycleId": "",
+                "name": "E2E_Automation_@CYCLE_NAME",
+                "build": "@BUILD",
+                "environment": "@ENVIRONMENT",
+                "description": "@DESCRIPTION",
+                "startDate": "@START_DATE",
+                "endDate": "@END_DATE",
+                "projectId":"@PROJECT_ID",
+                "versionId": "@VERSION_ID"
+            }
+        },
+        "cloneTestCycle":{
+            "urlPath":"/cycle",
+            "rawData":{
+                "clonedCycleId": "@CYCLE_ID",
+                "name": "@CYCLE_NAME",
+                "build": "@BUILD",
+                "environment": "@ENVIRONMENT",
+                "description": "@DESCRIPTION",
+                "startDate": "@START_DATE",
+                "endDate": "@END_DATE",
+                "projectId": "10202",
+                "versionId": "@VERSION_ID"
+            }
+        },
+        "deleteTestCycleById":"/cycle/@CYCLE_ID",
+        "addTestToTestCycle":{
+            "urlPath":"/execution/addTestsToCycle/",
+            "rawData":{
+                "issues": ["@ISSUE_ID"],
+                "cycleId": "@BUILD",
+                "projectId": "@PROJECT_ID"
+            }
+        },
+        "getAllExecutionByCycleId":{
+            "urlPath":"/execution",
+            "queryParam":{
+                "cycleId": "@CYCLE_ID",
+                "projectId": "@PROJECT_ID"
+            }
+        },
+        "executeTestCaseByExecutionId":{
+            "urlPath":"/execution/@EXECUTION_ID/execute",
+            "rawData": {
+                "status": "@STATUS",
+                "comment":"@COMMENT"
+            }
+        },
+        "status":{
+            "Pass":1,
+            "FAIL":2,
+            "WIP":3,
+            "BLOCKED":4,
+            "UNEXECUTED":-1
+        }
+    }
+}

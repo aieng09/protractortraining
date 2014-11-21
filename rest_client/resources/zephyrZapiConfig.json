@@ -1,0 +1,97 @@
+{
+    "Environments": {
+        "Production":{
+            "username":"aieng",
+            "password":"Illumina1",
+            "baseApiUrl":"http://basespace-project.illumina.com/rest/zapi/latest",
+            "ContentType":"application/json;charset=UTF-8",
+            "projectId":"10202",
+            "versionId": "-1",
+            "getAllTestCycles": "/cycle?projectId=@PROJECT_ID&versionId=@VERSION_ID",
+            "getTestCycleById": "/cycle/@ID",
+            "createNewTestCycle":{
+                "url":"/cycle",
+                "rawData":{
+                    "clonedCycleId": "",
+                    "name": "@CYCLE_NAME",
+                    "build": "@BUILD",
+                    "environment": "@ENVIRONMENT",
+                    "description": "@DESCRIPTION",
+                    "startDate": "@START_DATE",
+                    "endDate": "@END_DATE",
+                    "projectId": "10202",
+                    "versionId": "-1"
+                }
+            },
+            "cloneTestCycle":{
+                "url":"/cycle",
+                "rawData":{
+                    "clonedCycleId": "@CYCLE_ID",
+                    "name": "@CYCLE_NAME",
+                    "build": "@BUILD",
+                    "environment": "@ENVIRONMENT",
+                    "description": "@DESCRIPTION",
+                    "startDate": "@START_DATE",
+                    "endDate": "@END_DATE",
+                    "projectId": "10202",
+                    "versionId": "-1"
+                }
+            },
+            "getAllExecutionByCycleId":"/execution?cycleId=@CYCLE_ID&projectId=@PROJECT_ID",
+            "performExecute":{
+                "url":"/execution/@EXECUTION_ID/execute",
+                "rawData": {
+                    "status": "1",
+                    "comment":"@COMMENT"
+                }
+            }
+        },
+
+        "Test":{
+            "username":"aieng",
+            "password":"Illumina1",
+            "baseApiUrl":"http://basespace-project.illumina.com/rest/zapi/latest",
+            "ContentType":"application/json;charset=UTF-8",
+            "projectId":"10202",
+            "versionId": "-1",
+            "getAllTestCycles": "/cycle?projectId=@PROJECT_ID&versionId=@VERSION_ID",
+            "getTestCycleById": "/cycle/@ID",
+            "createNewTestCycle":{
+                "url":"/cycle",
+                "rawData":{
+                    "clonedCycleId": "",
+                    "name": "@CYCLE_NAME",
+                    "build": "@BUILD",
+                    "environment": "@ENVIRONMENT",
+                    "description": "@DESCRIPTION",
+                    "startDate": "@START_DATE",
+                    "endDate": "@END_DATE",
+                    "projectId": "10202",
+                    "versionId": "-1"
+                }
+            },
+            "cloneTestCycle":{
+                "url":"/cycle",
+                "rawData":{
+                    "clonedCycleId": "@CYCLE_ID",
+                    "name": "@CYCLE_NAME",
+                    "build": "@BUILD",
+                    "environment": "@ENVIRONMENT",
+                    "description": "@DESCRIPTION",
+                    "startDate": "@START_DATE",
+                    "endDate": "@END_DATE",
+                    "projectId": "10202",
+                    "versionId": "-1"
+                }
+            },
+            "getAllExecutionByCycleId":"/execution?cycleId=@CYCLE_ID&projectId=@PROJECT_ID",
+            "performExecute":{
+                "url":"/execution/@EXECUTION_ID/execute",
+                "rawData": {
+                    "status": "1",
+                    "comment":"@COMMENT"
+                }
+            }
+        }
+    }
+}

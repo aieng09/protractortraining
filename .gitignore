@@ -1,0 +1,23 @@
+#########################
+# Directories
+#########################
+.idea/
+node_modules/
+target/
+bin/
+.settings/
+.tscache/
+tmp/
+########################
+# Files
+#######################
+*.class
+*.classpath
+*.project
+*.settings
+*.springBeans
+*.iml
+*ide-plugin.xml
+*.log
+local.properties.json
+*.DS_Store

@@ -1,0 +1,22 @@
+{
+  "baseUrl":"http://angular.github.io/protractor/",
+  "seleniumAddress":"http://127.0.0.1:4444/wd/hub",
+  "chromeOnly":false,
+  "specs":["testcases/*"],
+  "multiCapabilities":[
+    {
+      "browserName": "chrome",
+      "chromeOptions": {
+        "args": [
+          "allow-running-insecure-content",
+          "ignore-certificate-errors"
+        ]
+      },
+      "count": 1
+    },
+    {
+      "browserName": "firefox",
+      "count":1
+    }
+  ]
+}

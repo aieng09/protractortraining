@@ -1,0 +1,25 @@
+{
+  "name": "protractordemo",
+  "version": "1.0.0",
+  "description": "protractor demo project",
+  "main": "index.js",
+  "dependencies": {
+    "jasmine-reporters": "^1.0.1",
+    "protractor": "^1.4.0"
+  },
+  "devDependencies": {},
+  "scripts": {
+    "test": "node ./node_modules/protractor/bin/protractor protractor_conf.js"
+  },
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/aieng09/protractordemo.git"
+  },
+  "author": "andyI",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/aieng09/protractordemo/issues"
+  },
+  "homepage": "https://github.com/aieng09/protractordemo"
+}
+
