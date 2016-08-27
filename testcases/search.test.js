@@ -12,7 +12,7 @@ describe('e2e: search test case', function() {
     2. click on reference
     3. click on protractor api link
     4. Enter search key work "clone"
-    5. Verify cssContainingText is present
+    5. Verify clone is present
     6. Clear the search content
     7. Enter search key work "cssContainingText
     8. verify the cssContainingText is present
